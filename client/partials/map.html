@@ -1,0 +1,59 @@
+<div ng-controller="MapsController">
+	<div class='row'>
+		<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+			<ui-gmap-markers 
+				models="markers" 
+				idkey="markers.id" 
+				coords="'coords'" 
+				icon="'icon'" 
+				click="click(this, id)">
+			</ui-gmap-markers>
+			<!-- <ui-gmap-windows 
+				models="windows" 
+				coords="'coords'"
+				show="'show'"
+				templateUrl="'templateUrl'"
+				templateParameter="'templateParameter'"
+				closeClick="closeClick()">
+			</ui-gmap-windows>  -->
+		</ui-gmap-google-map>
+	</div>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-6'>
+				<h3>Filter Dispensaries</h3>
+				<form class="form-inline">
+<!-- 				  	<div class="form-group">
+				    	<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+				    	<div class="input-group">
+				      		<div class="input-group-addon">$</div>
+				      		<input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+				      		<div class="input-group-addon">.00</div>
+				    	</div>
+  					</div>
+ -->  					
+ 						<!-- <button type="submit" class="btn btn-primary">Transfer cash</button> -->
+  					<div class="row checkbox col-md-12">
+					  	<label>
+					    	<input type="checkbox" value="">
+							Sativa
+					  </label>
+					</div>
+					<div class="row checkbox col-md-12">
+					  	<label>
+					    	<input type="checkbox" value="">
+							Indica
+					  </label>
+					</div>
+					<div class="row checkbox col-md-12">
+					  	<label>
+					    	<input type="checkbox" value="">
+							Hybrid
+					  </label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+

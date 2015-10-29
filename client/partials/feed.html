@@ -1,0 +1,40 @@
+<div ng-controller="ReservationsController">
+	<div class='container'>
+		<h3>Feed</h3>
+		<div class ='row feedbox' ng-repeat="reservation in feed_reservations | filter:search">
+			<h4>Your {{reservation.vendor}} reservation status...</h4>
+			<div class="col-sm-4 ">
+				<p ng-if="reservation.vendor_id == 583"><img src="assets/icons/green_theory.png"></p>
+				<p ng-if="reservation.vendor_id == 1528"><img src="assets/icons/ike.jpeg"></p>
+			</div>
+			<div class="col-sm-4">
+				<p><b>Strain:</b> {{reservation.name}}</p>
+				<p ng-if="reservation.quantity_gram == 1 "><b>Quantity: </b>{{reservation.quantity_gram}} gram</p>
+				<p ng-if="reservation.quantity_gram > 1 "><b>Quantity: </b>{{reservation.quantity_gram}} grams</p>
+				<p ng-if="reservation.quantity_eigth == 1 "><b>Quantity: </b>{{reservation.quantity_eigth}} eigth</p>
+				<p ng-if="reservation.quantity_eigth > 1 "><b>Quantity: </b>{{reservation.quantity_eigth}} eigths</p>
+				<p ng-if="reservation.quantity_quarter == 1 "><b>Quantity: </b>{{reservation.quantity_quarter}} quarter</p>
+				<p ng-if="reservation.quantity_quarter > 1 "><b>Quantity: </b>{{reservation.quantity_quarter}} quarters</p>
+				<p ng-if="reservation.quantity_half == 1 "><b>Quantity: </b>{{reservation.quantity_half}} half</p>
+				<p ng-if="reservation.quantity_half > 1 "><b>Quantity: </b>{{reservation.quantity_half}} halves</p>
+				<p ng-if="reservation.quantity_oz == 1 "><b>Quantity: </b>{{reservation.quantity_oz}} ounce</p>
+				<p ng-if="reservation.quantity_oz > 1 "><b>Quantity: </b>{{reservation.quantity_oz}} ounces</p>
+				<p ng-if="reservation.status == 0 "><b>Status:</b> Order not ready</p>
+				<p ng-if="reservation.status == 1 "><b>Status:</b> Ready for pickup</p>
+			</div>
+			<div class="col-sm-4">
+				<p><b>Total:</b> $120</p>
+			</div>
+			<div class="col-sm-4">
+				<p><button type="button" class="btn btn-danger" ng-click="cancelOrder(reservation.id)">Cancel Order</button></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+

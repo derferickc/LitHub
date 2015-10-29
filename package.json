@@ -1,0 +1,14 @@
+{
+  "name": "lithubb",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular-chart.js": "^0.8.5",
+    "body-parser": "latest",
+    "chart.js": "^1.0.2",
+    "express": "~4.2.0",
+    "express-session": "^1.11.3",
+    "mongoose": "latest",
+    "mysql": "^2.9.0",
+    "pg": "4.x"
+  }
+}
